@@ -40,13 +40,14 @@ body {
 }
 
 .addform button {
+    border: 2px solid rgb(128, 128, 128);
     background-color: aliceblue;
 
 }
 
 .addform button:hover {
-    border: 2px solid black;
-    background-color: rgb(147, 170, 190);
+    border: 2px solid rgb(0, 25, 78);
+
 }
 
 .addform button:active {
