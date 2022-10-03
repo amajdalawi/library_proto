@@ -126,6 +126,9 @@ td:nth-child(odd) {
     padding: 5px 10px;
 }
 
+input#pages {
+    width: 3rem;
+}
 .formhead {
     background-color: rgb(190, 223, 252);
     text-align: center;

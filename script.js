@@ -54,3 +54,23 @@ overlay.addEventListener('click', () => {
     const popup = document.querySelector('#popupForm.active');
     close_popup(popup);
 })
+
+// get the values from the form 
+
+let entrybutton = document.querySelector('.addentry');
+
+entrybutton.addEventListener('click', () => {
+    let title = document.querySelector('#title').value;
+    let pages = document.querySelector('#pages').value;
+    let dop = document.querySelector('#dop').value;
+    let author = document.querySelector('#Author').value;
+    let readstatus = document.querySelector('#readstatus').checked;
+
+    let newBook = new Book(title,author,pages,dop,readstatus);
+    console.log(addToLibrary(newBook));
+
+    const popup = document.querySelector('#popupForm');
+    close_popup(popup);
+})
+
+

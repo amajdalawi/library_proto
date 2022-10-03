@@ -21,7 +21,6 @@
             <div class="booktable">
                 <table>
                     <tr>
-                        <th>Sr</th>
                         <th>Title</th>
                         <th>Author</th>
                         <th>Pages</th>
@@ -30,7 +29,7 @@
                         <th>Remove?</th>
                     </tr>
                     <tr>
-                        <td colspan="7">No Entries exist in this library</td>
+                        <td colspan="6">No Entries exist in this library</td>
                     </tr>
                 </table>
             </div>
@@ -53,17 +52,25 @@
                 <input id="Author" required>
             </div>
 
-            <div>
-                <label for="pages">Pages: </label>
-                <input id="pages" required>
-            </div>
+            
 
             <div>
                 <label for="dop">Date of Publicaiton</label>
                 <input id="dop" required type="number">
             </div>
 
-            <button class="addentry">Add Entry</button>
+            <div>
+                <div>
+                    <label for="pages">Pages: </label>
+                    <input type="number" id="pages" required>
+                </div>
+                <div>
+                    <label for="readstatus">Read?: </label>
+                    <input type="checkbox" id="readstatus">
+                </div>
+            </div>
+
+            <button class="addentry" type="button">Add Entry</button>
         </form>
 
     </div>
