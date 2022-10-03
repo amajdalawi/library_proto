@@ -1,8 +1,8 @@
-
+"use strict";
 
 // book object constructor details 
 
-library_data = [];
+let library_data = [];
 
 function Book (title, author, pages, dateofpub, readstatus) {
     this.title = title;
@@ -23,6 +23,34 @@ function addToLibrary(book) {
 }
 
 // add the functionality of add a book button
+const overlay = document.querySelector('#overlay')
+let addButton = document.querySelector('.activate');
+let closeButton = document.querySelector('.close');
 
-addBookButton = document.querySelector('.addform button');
 
+function open_popup(popup) {
+    if (popup == null) return;
+    popup.classList.add('active');
+    overlay.classList.add('active');    
+}
+
+function close_popup(popup) {
+    if (popup == null) return;
+    popup.classList.remove('active');
+    overlay.classList.remove('active');    
+}
+
+addButton.addEventListener('click',() => {
+    const popup = document.getElementById('popupForm');
+    open_popup(popup);
+})
+
+closeButton.addEventListener('click', () => {
+    const popup = document.getElementById('popupForm');
+    close_popup(popup);
+})
+
+overlay.addEventListener('click', () => {
+    const popup = document.querySelector('#popupForm.active');
+    close_popup(popup);
+})
