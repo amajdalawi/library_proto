@@ -108,9 +108,18 @@ function updateTable(book) {
         }
     }
 
-    row.setAttribute(`data-${book.sr}`,`rem-${book.sr}`)
+    row.setAttribute(`data-${book.sr}`,`rem-${book.sr}`);
     let cell = row.insertCell();
-    cell.innerHTML = `<button id="rem-${book.sr}">&times</button>`
+    cell.innerHTML = `<button id="rem-${book.sr}">&times</button>`;
+    let rembutton = document.querySelector(`#rem-${book.sr}`);
+    rembutton.addEventListener('click', function() {
+        let originalRow = document.querySelector(`[data-${book.sr}]`);
+        originalRow.remove();
+        if (tbody.rows.length == 0) {
+            tbody.innerHTML = '<tr><td colspan="6">No Entries exist in this library</td></tr>';
+        }
+    });
+
 }
 
 
