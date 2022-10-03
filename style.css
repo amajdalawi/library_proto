@@ -1,0 +1,76 @@
+body {
+    min-height: 100vh;
+    background-color: rgb(190, 223, 252);
+    margin: 0;
+}
+
+:root {
+    box-sizing: border-box;
+}
+
+.title_con {
+    background-color: rgb(1, 41, 65);
+    color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 52px;
+    padding: 60px;
+    text-align: center;
+    /* margin: 0 */
+
+}
+
+/* after the section */
+
+
+
+.flex_wrap {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* button and info styling  */
+
+.addform {
+    display: flex;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+
+.addform button {
+    background-color: aliceblue;
+
+}
+
+.addform button:hover {
+    border: 2px solid black;
+    background-color: rgb(147, 170, 190);
+}
+
+.addform button:active {
+    border: 2px solid black;
+    background-color: rgb(201, 201, 201);
+}
+/* table styling */
+
+table {
+    border: 1px solid rgb(118, 119, 119);
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+
+td, th {
+    padding: 10px 20px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+th, td:nth-child(even) {
+    background-color: rgb(233, 233, 233);
+}
+
+td:nth-child(odd) {
+    background-color: rgb(212, 235, 255);
+}
