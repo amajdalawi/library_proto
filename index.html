@@ -19,18 +19,22 @@
                 <div><button class="activate">Add Book</button></div>
             </div>
             <div class="booktable">
-                <table>
-                    <tr>
-                        <th>Title</th>
-                        <th>Author</th>
-                        <th>Pages</th>
-                        <th>Date of Publication</th>
-                        <th>Read Status</th>
-                        <th>Remove?</th>
-                    </tr>
-                    <tr>
-                        <td colspan="6">No Entries exist in this library</td>
-                    </tr>
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Pages</th>
+                            <th>Date of Publication</th>
+                            <th>Read Status</th>
+                            <th>Remove?</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-body">
+                        <tr>
+                            <td colspan="6">No Entries exist in this library</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
@@ -41,7 +45,7 @@
             <button class="close">&times;</button>
 
         </div>
-        <form>
+        <form id="book-form">
             <div>
                 <label for="title">Book Title: </label>
                 <input type="text" id="title" required>
@@ -70,7 +74,7 @@
                 </div>
             </div>
 
-            <button class="addentry" type="button">Add Entry</button>
+            <button class="addentry" type="submit">Add Entry</button>
         </form>
 
     </div>
